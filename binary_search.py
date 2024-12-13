@@ -48,7 +48,6 @@ def binary_search_recursive(numbers_list, target_number, left_index, right_index
 def all_occurances(numbers_list, target_number):
     index = binary_search(numbers_list, target_number)
     indices = [index]
-    # find indices on left hand side
     i = index-1
     while i >=0:
         if numbers_list[i] == target_number:
@@ -57,7 +56,6 @@ def all_occurances(numbers_list, target_number):
             break
         i = i - 1
 
-    # find indices on right hand side
     i = index + 1
     while i<len(numbers_list):
         if numbers_list[i] == target_number:
